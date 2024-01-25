@@ -31,10 +31,10 @@ export default function Home() {
             <Card className="md:h-full">
               <CardContent>
                   <div className=" py-12  md:text-start text-center">
-                    <h1 className="text-white scroll-m-20 text-8xl font-[1000] tracking-tight lg:text-9xl">
+                    <h1 className="text-white scroll-m-20 text-8xl font-[1000] lg:text-9xl">
                       Sajad
                     </h1>
-                    <h1 className="text-white scroll-m-20 text-8xl font-[1000] tracking-tight lg:text-9xl">
+                    <h1 className="text-white scroll-m-20 text-8xl font-[1000] lg:text-9xl">
                       Kiyani
                     </h1>
                     <h3 className="text-white scroll-m-20 text-6xl font-[500] lg:text-7xl ">

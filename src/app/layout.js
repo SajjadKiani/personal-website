@@ -1,7 +1,7 @@
-import { Vazirmatn } from "next/font/google";
+import { Vazirmatn, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
-const vazirmatn = Vazirmatn({ subsets: ["arabic"] });
+const bebas_Neue = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata = {
   title: "Sajad Kiyani",
@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fa">
-      <body className={vazirmatn.className}>{children}</body>
+      <body className={bebas_Neue.className}>{children}</body>
     </html>
   );
 }
