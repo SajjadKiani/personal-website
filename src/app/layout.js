@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fa">
+    <html lang="en">
       <body className={bebas_Neue.className}>{children}</body>
     </html>
   );
