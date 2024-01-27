@@ -109,22 +109,35 @@ export default function Home() {
               <CardContent>
                 <div className="flex gap-5">
                   <div>
-                    <TelegramIcon />
+                    <Link
+                      href={'https://t.me/oxsjd0k/'}
+                    >
+                      <TelegramIcon />
+                    </Link>
                   </div>
                   <div>
-                    <InstagramIcon />
+                    <Link
+                      href={'https://instagrm.com/0xsaji/'}
+                    >
+                      <InstagramIcon />
+                    </Link>
                   </div>
                   <div>
-                    <GithubIcon />
+                    <Link
+                      href={'https://github.com/sajjadkiani/'}
+                    >
+                      <GithubIcon />
+                    </Link>
                   </div>
                   <div>
-                    <LinkedInIcon />
+                    <Link
+                      href={'https://www.linkedin.com/in/sajad-kiani-a80bb7227/'}
+                    >
+                      <LinkedInIcon />
+                    </Link>
                   </div>
                 </div>
               </CardContent>
-              <CardFooter>
-                <p></p>
-              </CardFooter>
             </Card>
           </div>
 
