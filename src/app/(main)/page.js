@@ -68,7 +68,7 @@ export default function Home() {
 
           <div className="col-span-1">
             <Link href={'/blog'}>
-              <Card className="md:h-full">
+              <Card className="md:h-full bg-indigo-300/20 text-white transition duration-300 ease-in-out hover:bg-indigo-400/50">
                 <CardHeader>
                   <CardTitle>Blog</CardTitle>
                   <CardDescription></CardDescription>
