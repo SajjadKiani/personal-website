@@ -29,7 +29,7 @@ export default function Home() {
 
 
           <div className="col-span-1 md:col-span-2  md:row-span-3">
-            <Card className="md:h-full">
+            <Card className="md:h-full bg-indigo-300/20 text-white transition duration-300 ease-in-out hover:bg-indigo-400/50">
               <CardContent>
                   <div className=" py-12  md:text-start text-center">
                     <h1 className="text-white scroll-m-20 text-8xl font-[1000] lg:text-9xl">
@@ -51,7 +51,7 @@ export default function Home() {
 
           <div className="col-span-1 md:row-span-2 ">
             <Link href={'/projects'}>
-              <Card className="md:h-full">
+              <Card className="md:h-full bg-indigo-300/20 text-white transition duration-300 ease-in-out hover:bg-indigo-400/50">
                 <CardHeader>
                   <CardTitle>Projects </CardTitle>
                   <CardDescription></CardDescription>
@@ -85,7 +85,7 @@ export default function Home() {
 
           <div className="col-span-1  ">
             <Link href={'/resume'}>
-              <Card className="md:h-full">
+              <Card className="md:h-full bg-indigo-300/20 text-white transition duration-300 ease-in-out hover:bg-indigo-400/50">
                 <CardHeader>
                   <CardTitle>Resume</CardTitle>
                   <CardDescription></CardDescription>
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
 
           <div className="md:col-span-2 col-span-1 ">
-            <Card>
+            <Card className={'bg-indigo-300/20 text-white transition duration-300 ease-in-out hover:bg-indigo-400/50'}>
               <CardHeader>
                 <CardTitle>Socials</CardTitle>
                 <CardDescription></CardDescription>

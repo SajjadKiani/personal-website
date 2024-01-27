@@ -1,4 +1,6 @@
+import { Vazirmatn } from "next/font/google";
 
+const vazirmatn = Vazirmatn({ subsets: ['latin', 'arabic'] })
 
 export const metadata = {
   title: "Sajad Kiyani | Blog",
@@ -7,6 +9,8 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-    <>{children}</>
+    <main className={vazirmatn.className}>
+      {children}
+    </main>
   );
 }
