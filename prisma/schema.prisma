@@ -26,6 +26,7 @@ model Post {
   authorId   Int
   slug       String     @unique
   categories Category[]
+  createdAt DateTime    @default(now())
 }
 
 model Category {
