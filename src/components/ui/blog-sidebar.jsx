@@ -7,14 +7,7 @@ import {
 } from "@/components/ui/accordion"
 import Link from "next/link"
 
-export default function BlogSidebar () {
-
-    const items = [
-        {category: 'test', title: 'testdddd', slug: 'test'},
-        {category: 'test1', title: 'test1', slug: 'test1'},
-        {category: 'test2', title: 'test2', slug: 'test2'},
-        {category: 'test2', title: 'test3', slug: 'test3'},
-    ]
+export default function BlogSidebar ({items}) {
 
     const categories = items.map((d) => d.category)
 
