@@ -1,13 +1,29 @@
+import path from "path";
+import { readFileSync } from "fs"
+import { compileMDX } from "next-mdx-remote/rsc";
 
-export default function Page ({params}) {
+const fetchData = async (slug) => {
+    const source = readFileSync(
+        path.join('src', 'database', `${slug}.mdx`),
+        'utf8'
+    );
+
+    const { content, frontmatter } = await compileMDX({ source, options: { parseFrontmatter: true } });
+
+    return { content, frontmatter };
+};
+
+export default async function Page ({params}) {
     
     const {slug} = params;
+
+    const { content, frontmatter } = await fetchData(slug)
 
     return (
         <div className="mt-20 md:px-36" dir="rtl">
             <div className="flex justify-between items-center">
                 <p className="text-[36px] font-bold">
-                    عنوان
+                    {frontmatter?.title}
                 </p>
 
                 <p className="text-secondary">
@@ -15,8 +31,19 @@ export default function Page ({params}) {
                 </p>
             </div>
             <p className="text-justify">
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. 
+                    {content}
             </p>
         </div>
     )
 }
+
+export async function generateMetadata({ params }) {
+
+    const {slug} = params
+
+    const { frontmatter } = await fetchData(slug)
+
+    return {
+      title: 'Blog | ' + frontmatter.title,
+    }
+  }

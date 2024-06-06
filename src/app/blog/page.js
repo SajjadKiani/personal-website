@@ -31,7 +31,7 @@ export default async function Page () {
                         <div key={index}>
                             <div className="flex justify-between items-center">
                                 <p className="text-[36px] font-bold">
-                                    <Link href={post.slug}>
+                                    <Link href={'/blog/' + post.slug}>
                                         {post.title}
                                     </Link>
                                 </p>
