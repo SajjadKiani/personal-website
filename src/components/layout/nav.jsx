@@ -12,7 +12,7 @@ export default function Nav () {
     ]
     
     return (
-        <nav className="flex md:px-16 sm:px-2 justify-between py-4 items-center">
+        <nav className="flex container justify-between py-4 items-center">
             <Logo />
 
             <div className="space-x-10">
