@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-2 gap-8 items-center justify-between">
-      <div className="flex flex-col">
+    <div className="grid grid-cols-2 gap-8 items-center justify-between mt-20 md:mt-0">
+      <div className="flex flex-col col-span-2 md:col-span-1">
         <p className="text-[48px] font-semibold">
           Hello, I’m
         </p>
@@ -17,7 +17,7 @@ export default function Home() {
         </p>
         <p className="text-[24px] text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seddiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
 
-        <div className="space-x-6 mt-5">
+        <div className="mt-5 flex gap-6 ">
           <Button asChild>
             <Link href="/blog">Blog</Link>
           </Button>
@@ -29,7 +29,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className="md:flex justify-end hidden">
         <Image
           src={'/banner.svg'}
           width={600}
