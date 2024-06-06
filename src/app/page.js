@@ -17,7 +17,7 @@ export default function Home() {
         </p>
         <p className="text-[24px] text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seddiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
 
-        <div className="mt-5 flex gap-6 ">
+        <div className="mt-5 flex gap-6 justify-center md:justify-start">
           <Button asChild>
             <Link href="/blog">Blog</Link>
           </Button>
@@ -34,6 +34,7 @@ export default function Home() {
           src={'/banner.svg'}
           width={600}
           height={600}
+          alt="banner"
         />
       </div>
     </div>
