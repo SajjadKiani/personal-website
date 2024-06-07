@@ -25,7 +25,7 @@ export default function BlogSidebar ({items}) {
                         <AccordionItem key={index} value={`item-${index}`}>
                             <AccordionTrigger> {category} </AccordionTrigger>
                             <AccordionContent>
-                                <ul>
+                                <ul className="space-y-2">
                                     {sidebarItems[category].map((item, index) => 
                                         <li key={index}> 
                                             <Link href={'blog/' + item.slug}>

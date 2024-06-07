@@ -26,7 +26,7 @@ export default function Nav () {
 
             <div className="md:block hidden space-x-10">
                 {links.map((item, index) => 
-                    <Link className="text-[28px]" href={item.path} key={index}>
+                    <Link className="text-[18px] font-bold" href={item.path} key={index}>
                         {item.title}
                     </Link>
                 )}
