@@ -13,6 +13,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          property="og:image"
+          content={process.env.NODE_ENV === 'production' ? 'https://personal-website-indol-sigma.vercel.app/api/og' : 'http://localhost:3000/api/og' }
+        />
+        <meta property="og:site_name" content="Sajad kiyani" />
+        <meta property="og:title" content="Sajad kiyani" />
+        <meta property="og:description" content="Sajad Kiyani, Frontend developer, personal website" />
+        <meta property="twitter:image" content={process.env.NODE_ENV === 'production' ? 'https://personal-website-indol-sigma.vercel.app/api/og' : 'http://localhost:3000/api/og' } />
+        <meta property="twitter:title" content="Sajad kiyani" />
+        <meta property="twitter:description" content="Sajad Kiyani, Frontend developer, personal website" />
+      </head>
       <body className={roboto.className + " " + vazirmatn.className}>
         <Layout>
           {children}

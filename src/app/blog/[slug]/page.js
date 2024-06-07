@@ -53,5 +53,6 @@ export async function generateMetadata({ params }) {
 
     return {
       title: 'Blog | ' + frontmatter?.title,
+      description: frontmatter?.description
     }
   }

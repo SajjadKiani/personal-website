@@ -5,6 +5,11 @@ import fs, { readFileSync } from "fs"
 import path from "path";
 import moment from "jalali-moment"
 
+export const metadata = {
+    title: 'sajad kiyani | blog',
+    description: 'blog page'
+}
+
 export default async function Page () {
 
     const files = fs.readdirSync('src/database');
