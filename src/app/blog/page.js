@@ -26,9 +26,9 @@ export default async function Page () {
                 <div className="md:col-span-1 col-span-4">
                     <BlogSidebar items={posts} />
                 </div>
-                <div className="md:col-span-3 col-span-4 flex flex-col" dir="rtl">
+                <div className="md:col-span-3 col-span-4 flex flex-col gap-5" dir="rtl">
                     {posts.map((post, index) =>                     
-                        <div key={index}>
+                        <div key={index} dir={post?.lang === 'en' ? 'ltr' : 'rtl'}>
                             <div className="flex justify-between items-center">
                                 <p className="text-[36px] font-bold">
                                     <Link href={'/blog/' + post.slug}>

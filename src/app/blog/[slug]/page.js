@@ -21,7 +21,7 @@ export default async function Page ({params}) {
     const { content, frontmatter } = await fetchData(slug)
 
     return (
-        <div className="mt-20 md:px-36" dir="rtl">
+        <div className="mt-20 md:px-36"  dir={frontmatter?.lang === 'en' ? 'ltr' : 'rtl'}>
             <div className="flex justify-between items-center">
                 <p className="text-[36px] font-bold">
                     {frontmatter?.title}
