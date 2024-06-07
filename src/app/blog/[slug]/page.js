@@ -1,6 +1,7 @@
 import path from "path";
 import { readFileSync } from "fs"
 import { compileMDX } from "next-mdx-remote/rsc";
+import { Suspense } from "react";
 
 const fetchData = async (slug) => {
     const source = readFileSync(
@@ -30,9 +31,12 @@ export default async function Page ({params}) {
                     ۱۴۰۳/۲/۱
                 </p>
             </div>
-            <p className="text-justify">
+            
+            <div className="text-justify">
+                <Suspense fallback={<p>loading...</p>}>
                     {content}
-            </p>
+                </Suspense>
+            </div>
         </div>
     )
 }
@@ -44,6 +48,6 @@ export async function generateMetadata({ params }) {
     const { frontmatter } = await fetchData(slug)
 
     return {
-      title: 'Blog | ' + frontmatter.title,
+      title: 'Blog | ' + frontmatter?.title,
     }
   }
