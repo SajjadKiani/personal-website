@@ -2,6 +2,7 @@ import path from "path";
 import { readFileSync } from "fs"
 import { compileMDX } from "next-mdx-remote/rsc";
 import { Suspense } from "react";
+import moment from "jalali-moment";
 
 const fetchData = async (slug) => {
     const source = readFileSync(
@@ -28,7 +29,10 @@ export default async function Page ({params}) {
                 </p>
 
                 <p className="text-secondary">
-                    ۱۴۰۳/۲/۱
+                    {frontmatter.date && moment(frontmatter?.date, 'YYYY-M-D HH:mm:ss')
+                        .locale('fa')
+                        .format('YYYY/M/D HH:mm:ss')
+                    }
                 </p>
             </div>
             

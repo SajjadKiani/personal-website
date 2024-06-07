@@ -3,6 +3,7 @@ import Link from "next/link";
 import { serialize } from 'next-mdx-remote/serialize'
 import fs, { readFileSync } from "fs"
 import path from "path";
+import moment from "jalali-moment"
 
 export default async function Page () {
 
@@ -37,7 +38,10 @@ export default async function Page () {
                                 </p>
 
                                 <p className="text-secondary">
-                                    ۱۴۰۳/۲/۱
+                                    {post.date && moment(post.date, 'YYYY-M-D HH:mm:ss')
+                                        .locale('fa')
+                                        .format('YYYY/M/D HH:mm:ss')
+                                    }
                                 </p>
                             </div>
                             <p className="text-justify">
