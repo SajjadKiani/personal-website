@@ -1,6 +1,14 @@
 import Link from "next/link";
 import Logo from "./logo";
 import { MenuIcon } from "lucide-react";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+  } from "@/components/ui/dropdown-menu"
 
 
 export default function Nav () {
@@ -25,7 +33,20 @@ export default function Nav () {
             </div>
 
             <div className="md:hidden block">
-                <MenuIcon />
+                <DropdownMenu>
+                    <DropdownMenuTrigger>
+                        <MenuIcon />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                        {links.map((item,index) =>
+                            <DropdownMenuItem key={index}>
+                                <Link href={item.path}>
+                                    {item.title}
+                                </Link>
+                            </DropdownMenuItem>
+                        )}
+                    </DropdownMenuContent>
+                </DropdownMenu>
             </div>
         </nav>
     )
