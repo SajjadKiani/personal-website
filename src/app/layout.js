@@ -1,6 +1,8 @@
 import { Inter, Roboto, Vazirmatn } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/layout";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const roboto = Inter({ subsets: ["latin"] });
 const vazirmatn = Vazirmatn({subsets: ['arabic']});
@@ -26,6 +28,8 @@ export default function RootLayout({ children }) {
         <meta property="twitter:description" content="Sajad Kiyani, Frontend developer, personal website" />
       </head>
       <body className={roboto.className + " " + vazirmatn.className}>
+        <Analytics />
+        <SpeedInsights />
         <Layout>
           {children}
         </Layout>
