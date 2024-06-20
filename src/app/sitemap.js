@@ -4,7 +4,7 @@ import { serialize } from "next-mdx-remote/serialize";
 
 export default async function sitemap() {
 
-    const baseUrl = process.env.NODE_ENV === 'production' ? 'https://personal-website-indol-sigma.vercel.app' : 'http://localhost:3000/'
+    const baseUrl = process.env.NODE_ENV === 'production' ? 'https://sajadkiyani.ir' : 'http://localhost:3000/'
 
     const files = fs.readdirSync('src/database');
 
