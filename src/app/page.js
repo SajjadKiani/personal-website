@@ -15,7 +15,7 @@ export default function Home() {
         <p className="text-[48px] font-extralight">
           and i’m a Frontend Devloper
         </p>
-        <p className="text-[24px] text-justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seddiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+        <p className="text-[24px] text-justify"> who loves blockchain technology and research. I enjoy building easy-to-use web3 solutions that combine advanced technology with good design.</p>
 
         <div className="mt-5 flex gap-6 justify-center md:justify-start">
           <Button asChild>
